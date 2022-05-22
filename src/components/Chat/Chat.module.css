@@ -1,0 +1,121 @@
+.chat {
+  width: 100%;
+  height: 95vh;
+  padding: 85px 85px;
+  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.chat .messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.chat .messages .other {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.chat .messages .other .otherMessage {
+  background: var(--message-other-bg-color);
+  max-width: 60%;
+  word-break: break-all;
+  padding: 6px 38px 8px 9px;
+  font-size: 14.4px;
+  border-radius: 0px 7.5px 7.5px 7.5px;
+  position: relative;
+}
+
+.chat .messages .other .otherMessage .corner svg {
+  content: "";
+  position: absolute;
+  left: -13px;
+  width: 16px;
+  height: 18px;
+  top: 0;
+  z-index: 100;
+  fill: var(--message-other-bg-color);
+}
+
+.chat .messages .other .otherMessage .time {
+  position: absolute;
+  right: 6px;
+  bottom: 4px;
+  font-weight: 400;
+  color: var(--message-detail-color);
+  font-size: 0.8em;
+}
+
+/* Own Message */
+
+.chat .messages .own {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.chat .messages .own .ownMessage {
+  background: var(--message-own-bg-color);
+  max-width: 60%;
+  word-break: break-all;
+  padding: 6px 56px 8px 9px;
+  font-size: 14.4px;
+  border-radius: 7.5px 0px 7.5px 7.5px;
+  position: relative;
+}
+
+.chat .messages .own .ownMessage .corner svg {
+  content: "";
+  position: absolute;
+  right: -13px;
+  width: 16px;
+  height: 18px;
+  top: 0;
+  z-index: 100;
+  fill: var(--message-other-bg-color);
+}
+
+.chat .messages .own .ownMessage .details {
+  position: absolute;
+  right: 6px;
+  bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.chat .messages .own .ownMessage .details .time {
+  font-weight: 400;
+  color: var(--message-detail-color);
+  font-size: 0.8em;
+}
+
+.chat .messages .own .ownMessage .details .messageStatus {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Scroll To Bottom */
+
+.scrollBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  position: fixed;
+  background: var(--message-send-bg-color);
+  border-radius: 50%;
+  right: 14px;
+  bottom: 78px;
+}

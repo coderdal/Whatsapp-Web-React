@@ -1,0 +1,85 @@
+.header {
+  height: 58px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--header-bg-color);
+}
+
+/* Header Left Styling */
+
+.headerLeft {
+  width: 30%;
+  height: 100%;
+  border-right: 1px solid var(--messages-bar-border-right-color);
+  padding: 10px 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLeft .figure {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.headerLeft .figure svg {
+  width: 40px;
+  height: 40px;
+}
+
+.headerLeft .actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.headerLeft .actionButtons .actionButton {
+  width: 40px;
+  height: 40px;
+}
+
+/* Header Right Styling */
+
+.headerRight {
+  flex: 1;
+  height: 100%;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerRight .user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.headerRight .user h4 {
+  font-weight: 500;
+}
+
+.headerRight .user .figure {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.headerRight .user .figure img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.headerRight .chatActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

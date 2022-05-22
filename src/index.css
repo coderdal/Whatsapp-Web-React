@@ -1,13 +1,62 @@
-body {
+@import url("font.css");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --header-bg-color: #202c33;
+  --chatbar-dark-bg-color: #182229;
+  --icon-color: #aebac1;
+  --placeholder-color: #8696a0;
+
+  --messages-bar-bg-color: #111b21;
+  --messages-bar-border-right-color: #2f3b43;
+  --messages-bar-message-border-color: #222d34;
+
+  --chat-name-text-color: #e9edef;
+  --chat-details-text-color: #83878b;
+  --chat-bg-color: #0b141a;
+
+  --message-text-color: #e9edef;
+  --message-own-bg-color: #005c4b;
+  --message-other-bg-color: #141d23;
+  --message-send-bg-color: #202c33;
+  --message-send-input-bg-color: #2a3942;
+  --message-detail-color: #90ab9a;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #e9edef;
+  background: var(--chat-bg-color);
+  overflow: hidden;
+}
+
+::placeholder {
+  color: var(--placeholder-color);
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff2f #000000;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff2f;
+  border: 0px solid #ffffff2f;
 }
